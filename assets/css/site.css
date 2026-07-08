@@ -464,6 +464,35 @@ ul { list-style: none; padding: 0; }
 .project-card .pc-link svg { width: 15px; height: 15px; transition: transform .2s; }
 .project-card:hover .pc-link svg { transform: translate(2px,-2px); }
 
+/* multi-link row (Live + GitHub, or Firefox + Chrome + GitHub) */
+.project-card .pc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+/* primary link sits in a pill so the "Live" CTA reads as the main action */
+.project-card .pc-links .pc-link {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: #f4f4f5;
+  color: #0a0a0a;
+  transition: transform .2s, background .2s;
+}
+.project-card .pc-links .pc-link:hover { transform: translateY(-2px); background: #fff; }
+/* secondary links are ghost-styled (subtle, not competing) */
+.project-card .pc-links .pc-link-ghost {
+  background: var(--glass-bg);
+  color: var(--text-dim);
+  border-color: var(--line);
+}
+.project-card .pc-links .pc-link-ghost:hover {
+  background: var(--glass-bg-hi);
+  color: var(--text);
+  border-color: var(--glass-border);
+}
+
 /* ---------- Photography: masonry + lightbox ---------- */
 .masonry {
   columns: 3 280px;
