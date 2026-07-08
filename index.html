@@ -1,415 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Yun-Jang Liu's Resume</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <!-- in your header -->
-  <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ignatius Liu</title>
+  <meta name="description" content="Ignatius Liu — software, photography, and a quiet corner of the internet.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Ignatius Liu">
+  <meta property="og:description" content="Software, photography, and a quiet corner of the internet.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.suitangi.me/">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/img/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
+<body class="page-home">
 
-<body id="page-top">
+  <!-- background glow + film grain -->
+  <div class="bg-fx" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <div class="spotlight" id="spotlight"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Menu</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Personal Projects </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards </a>
-        </li>
+  <!-- blueprint registration marks (corners) -->
+  <div class="reg-marks" aria-hidden="true">
+    <span class="reg tl"></span><span class="reg tr"></span>
+    <span class="reg bl"></span><span class="reg br"></span>
+  </div>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Ignatius Liu — home">
+        <img class="chip" src="/assets/img/logo.svg" alt="">
+        <span class="name">Ignatius <b>Liu</b></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/photography/">Photography</a></li>
+        <li><a href="/socials/">Socials</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="container-fluid p-0">
+  <main>
+    <section class="stage wrap">
 
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-      <div class="my-auto">
-        <h1 class="mb-0">Yun-Jang
-          <span class="text-primary">Liu</span>
-        </h1>
-        <div class="subheading mb-5">
-          <a href="mailto:yun.jang.liu@gmail.com">yun.jang.liu@gmail.com</a>
-        </div>
-        <p class="mb-5">I am a senior at Vanderbilt University currently pursuing a degree in computer science and mathematics, with several years of experience coding including in Java, Python, C++ and more. Have lead and worked in many group and
-          self-directed projects.</p>
-        <ul class="list-inline list-social-icons mb-0">
-          <!-- <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li> -->
-          <!-- <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li> -->
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/yun-jang-liu/">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://github.com/suitangi/">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <!-- blueprint hero: the name as a technical drawing -->
+      <div class="hero-drawing" data-reveal aria-hidden="true">
+        <svg class="hero-svg" viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="bp-stroke" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+              <stop offset=".55" stop-color="#dcdcdf" stop-opacity=".85"/>
+              <stop offset="1" stop-color="#8a8a90" stop-opacity=".7"/>
+            </linearGradient>
+          </defs>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-      <div class="my-auto">
-        <h2 class="mb-5">Experience</h2>
+          <!-- faint construction grid -->
+          <g stroke="rgba(255,255,255,.07)" stroke-width="1">
+            <line x1="0" y1="60"  x2="900" y2="60"/>
+            <line x1="0" y1="130" x2="900" y2="130"/>
+            <line x1="0" y1="200" x2="900" y2="200"/>
+          </g>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Software Developer Intern</h3>
-            <div class="subheading mb-3">International Business Machines (IBM)</div>
-            <p>Worked with an Agile team to redesign a legacy Customer Data Archival system that serviced the IBM Supply Chain Business Network. Using technologies such as Java, Vert.x, Couch DB, IBM MQueue and Docker, the team designed and built a
-              more generalized, scalable and reliable cloud-based service application for supply chain documents to service multiple business-to-business networks. I designed, developed and integrated several of the microservices, including the local
-              storage archival system, cloud storage archival and their access and management libraries. Also demonstrated the product to management in multiple meetings to plan the solution’s integration to production code.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">May 2017 - August 2017</span>
-          </div>
-        </div>
+          <!-- baseline + capline, like a real letterform drawing -->
+          <g stroke="rgba(255,255,255,.20)" stroke-width="1" stroke-dasharray="4 5">
+            <line x1="0" y1="222" x2="900" y2="222"/>
+            <line x1="0" y1="22"  x2="900" y2="22"/>
+          </g>
+          <g fill="rgba(255,255,255,.35)" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="1">
+            <text x="0" y="18">CAPLINE</text>
+            <text x="0" y="276">BASELINE</text>
+          </g>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Event & Journalism Photographer</h3>
-            <div class="subheading mb-3">Vanderbilt University</div>
-            <p>Worked as an event photographer for student organizations on Vanderbilt campus and also as a photojournalist for Vanderbilt Hustler, the official
-              student-run news for the University. To create content from photos to videos and to present a story while following photojournalism workflows
-              and guidelines.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">December 2017 - Current</span>
-          </div>
-        </div>
+          <!-- the name, single line (desktop / tablet) -->
+          <g class="name-1col" fill="none" stroke="url(#bp-stroke)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <text x="0" y="200" font-family="Inter, sans-serif" font-size="180" font-weight="700" letter-spacing="-4">IGNATIUS LIU</text>
+          </g>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">IT Specialist Intern</h3>
-            <div class="subheading mb-3">International Business Machines (IBM)</div>
-            <p>Worked on an Agile team that built a production system to automate the process of adding and editing products into a proprietary configurator software by reading through unstructured documentation such as a PDF specification. Then,
-              using multiple technologies such as Watson SystemT Annotation and TensorFlow to generate code so that minimal developer input is needed to add a new product into the configurator. Developed a production tool responsible for the
-              automation of validation of the documents to ensure they contained the needed information, in addition to writing rules and queries to aid the flow and extraction of data. </p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">May 2017 - August 2017</span>
-          </div>
-        </div>
+          <!-- the name, two lines stacked (mobile) -->
+          <g class="name-2col" fill="none" stroke="url(#bp-stroke)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <text x="0" y="120" font-family="Inter, sans-serif" font-size="150" font-weight="700" letter-spacing="-3">IGNATIUS</text>
+            <text x="0" y="240" font-family="Inter, sans-serif" font-size="150" font-weight="700" letter-spacing="-3">LIU</text>
+          </g>
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">AFM Labratory Assistant</h3>
-            <div class="subheading mb-3">National Tsing Hua Univesity</div>
-            <p>Worked at an Atomic Force Microscopy labratory at the National Tsing Hua Univesity as a labratory assistant, helping running trials and taking data using various high-end lab technologies.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">June 2015 - August 2015</span>
-          </div>
-        </div>
-
-        <!-- <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Developer</h3>
-              <div class="subheading mb-3">Intelitec Solutions</div>
-              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">December 2011 - March 2013</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Junior Web Designer</h3>
-              <div class="subheading mb-3">Shout! Media Productions</div>
-              <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">July 2010 - December 2011</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Design Intern</h3>
-              <div class="subheading mb-3">Shout! Media Productions</div>
-              <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2008 - June 2010</span>
-            </div>
-          </div> -->
-
+          <!-- dimension marks below a couple of glyphs -->
+          <g stroke="rgba(255,255,255,.28)" stroke-width="1">
+            <line x1="2"   y1="232" x2="2"   y2="252"/>
+            <line x1="110" y1="232" x2="110" y2="252"/>
+            <line x1="2"   y1="248" x2="110" y2="248"/>
+          </g>
+          <text x="40" y="270" fill="rgba(255,255,255,.4)" font-family="JetBrains Mono, monospace" font-size="9">108</text>
+        </svg>
       </div>
 
+      <!-- the blueprint "drawing": the three section links, now the focal point -->
+      <nav class="index" data-reveal aria-label="Index">
+        <a href="/projects/">
+          <span class="i-row">
+            <span class="i-num">01</span>
+            <span class="i-name">Projects</span>
+          </span>
+          <span class="i-desc">Browser extensions, games, and small tools.</span>
+        </a>
+        <a href="/photography/">
+          <span class="i-row">
+            <span class="i-num">02</span>
+            <span class="i-name">Photography</span>
+          </span>
+          <span class="i-desc">Travel, street, and quiet details.</span>
+        </a>
+        <a href="/socials/">
+          <span class="i-row">
+            <span class="i-num">03</span>
+            <span class="i-name">Socials</span>
+          </span>
+          <span class="i-desc">Where else to find me.</span>
+        </a>
+      </nav>
+
+      <!-- title block: name demoted, lives in the corner like a real drawing -->
+      <aside class="title-block" data-reveal>
+        <div class="tb-grid">
+          <span class="tb-k">DRAWING</span><span class="tb-v">HOME PAGE</span>
+          <span class="tb-k">AUTHOR</span>  <span class="tb-v">IGNATIUS LIU</span>
+          <span class="tb-k">SHEET</span>   <span class="tb-v">01 / 01</span>
+          <span class="tb-k">TIME</span>    <span class="tb-v"><span data-clock>— : —</span></span>
+        </div>
+      </aside>
+
     </section>
+  </main>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-      <div class="my-auto">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Vanderbilt University</h3>
-            <div class="subheading mb-3">Bachelor of Engineering</div>
-            <div>Computer Science · Mathematics</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2016 - Present</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">State College Area Highschool</h3>
-            <div class="subheading mb-3">Highschool Diploma</div>
-            <div></div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2012 - June 2016</span>
-          </div>
-        </div>
-
+  <footer class="footer">
+    <div class="wrap">
+      <span>© <span data-year>2026</span> Ignatius Liu</span>
+      <div class="footer-links">
+        <a href="/projects/">Projects</a>
+        <a href="/photography/">Photography</a>
+        <a href="/socials/">Socials</a>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-      <div class="my-auto">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Technical Skills &amp; Tools</div>
-        <ul class="list-inline list-icons">
-          <li class="list-inline-item">
-            <i class="devicon-cplusplus-plain" a href=" " title="C++"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-java-plain" a href=" " title="Java"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-javascript" a href=" " title="Javascript"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-python" a href=" " title="Python"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-mysql-plain" a href=" " title="mysql"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-html5" a href=" " title="HTML"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-css3" a href=" " title="CSS"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-chrome-plain" a href=" " title="Chrome Extension"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-google_drive" a href=" " title="Google Drive"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-gimp-plain" a href=" " title="Gimp"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-photoshop-plain" a href=" " title="Photoshop"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-slack-plain" a href=" " title="Slack"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-git-plain" a href=" " title="Git"></i>
-          </li>
-        </ul>
-
-        <div class="subheading mb-3">World Languages</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <div>English - Native</div>
-          <li>
-            <div>Chinese (Mandarin) - Native</div>
-          <li>
-            <div>Japanese - Intermediate</div>
-          <li>
-            <div>Spanish - Beginner</div>
-        </ul>
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-      <div class="my-auto">
-        <h2 class="mb-5">Interests</h2>
-        <p>Currently, my biggest hobby aside from coding-related activities include photography and videography. Feel free to checkout my photography page <a href="http://www.igli.photography/">here</a>.
-          I enjoy a multitude of different styles of photograhy including astrophotography and macrophotography. </p>
-        <p>When I'm not coding or behind a camera, you can find me at the gym working out or fencing, or in front of a piano/cello/guitar making music with friends.
-          I am also an aspiring baker and enjoy spending my time in a science fiction and fantasy world provided by a book, movie, games, or tv series.</p>
-        <p class="mb-0"></p>
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-      <div class="my-auto">
-        <h2 class="mb-5">Personal Projects</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <a href="https://chrome.google.com/webstore/detail/messsengerplus/hmciajeemeompacmillfkacaihdbpafj"><h3 class="mb-0">MessengerPlus</h3></a>
-            <div class="subheading mb-3">Google Chrome/Firefox Extension</div>
-            <div>An extension that adds additional functionality and interfaces to the Facebook Messenger website. Done via CSS, Javascript, JQuery and HTML. This project is published on the Chrome Webstore and has over 1500 active users.</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary"></span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <a href="https://github.com/suitangi/Minimal-Newtab"><h3 class="mb-0">Cinemagraph NewTab</h3></a>
-            <div class="subheading mb-3">Google Chrome/Firefox Extension</div>
-            <div>A Google Chrome and Firefox extension aimed to provide a new background for the new tab landing page. In addition, to provide useful interfaces such as a clock, todo list and search bar. The current published extension on both Google Chrome and Firefox uses cinemagraphes from a movie called Garden of Words, and has about 1500 combined users.
-            </div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary"></span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">EpBlock</h3>
-            <div class="subheading mb-3">Java Program</div>
-            <div>A Java application designed to deploy an overlaying blocker when detecting rapid flashes aimed at epilepsy patients. This project competed in the Technology Student Association National's Open Source Software Development event and achieved 4th place.
-            </div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary"></span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5   ">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">IBM U</h3>
-            <div class="subheading mb-3">Hackathon Project (Web/Hardware)</div>
-            <div>A universal customization platform where all kinds of products could be automatically customized to the users’ liking. Built with Node Express, Bootstrap, Raspberry Pi, and IBM Cloudant. This project was built during the 2019 IBM Intern Hackathon in 48 hours.</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary"></span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-      <div class="my-auto">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <!-- <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Google Analytics Certified Developer</li> -->
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Text Analytics101 - IBM Certification</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Python for Data science - IBM Certification</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Text Analytics101 - IBM Certification</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Big Data Foundations Level 1 - IBM Certification</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Enterprise Deisgn Thinking Practitioner - IBM Certification</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            2<sup>nd</sup>
-            Place - Bloomsberg Univesity - High School Programming Contest 2016</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - Pennsylvania State University - Microsoft Coding Competition 2015</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Technology Student Association - Multiple National Competition Awards</li>
-
-        </ul>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
-
+  <script src="/assets/js/site.js"></script>
 </body>
-
 </html>

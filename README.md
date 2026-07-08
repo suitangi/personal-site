@@ -1,71 +1,59 @@
-# [Start Bootstrap - Resume](https://startbootstrap.com/template-overviews/resume/)
+# suitangi.github.io
 
-[Resume](https://startbootstrap.com/template-overviews/resume/) is a resume and CV theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a fixed sidebar with content sections to build a simple, yet elegant resume.
+Personal site of **Ignatius Liu** — a minimal, monochrome homepage with a
+film-grain / glass aesthetic, and sections for projects, photography, and
+socials. Plain static HTML/CSS/JS, no build step, served by GitHub Pages at
+**[www.suitangi.me](https://www.suitangi.me)**.
 
-## Preview
+## Structure
 
-[![Resume Preview](https://startbootstrap.com/assets/img/templates/resume.jpg)](https://blackrockdigital.github.io/startbootstrap-resume/)
+```
+index.html              editorial homepage (enormous type, live clock,
+                        cursor spotlight, numbered section links)
+projects/index.html     → /projects/
+photography/index.html  → /photography/   (masonry + lightbox)
+socials/index.html      → /socials/
+404.html                not-found page
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-resume/)**
+assets/css/site.css     design system (tokens, glass, grain, components)
+assets/js/site.js       scroll reveal, mobile nav, lightbox, clock, spotlight
+assets/img/             IL monogram logo + favicons + webmanifest
+img/                    original photos
+img/photos/             optimized thumbnails (800px) + full/ (2000px) for lightbox
 
-## Status
+.nojekyll               tells GitHub Pages to serve files as-is (no Jekyll)
+optimize-photos.mjs     dev-only script that regenerates img/photos/
+```
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-resume/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-resume.svg)](https://www.npmjs.com/package/startbootstrap-resume)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-resume.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-resume)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-resume/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-resume)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-resume/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-resume?type=dev)
+The head/nav/footer/background are inlined into each page (no templating),
+so there's no build step and nothing to install.
 
-## Download and Installation
+## Run locally
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/resume/)
-* Install via npm: `npm i startbootstrap-resume`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-resume.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-resume)
+Any static file server works — Python is easiest:
 
-## Usage
+```bash
+python -m http.server 8000
+# → http://localhost:8000
+```
 
-### Basic Usage
+## Editing content
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+- **Projects** — edit `projects/index.html` (each card is an `<article class="glass project-card">`).
+- **Photos** — drop originals into `img/`, run the optimizer below, then add a
+  `<figure>` block in `photography/index.html`.
+- **Socials** — edit the `<a class="glass social-card">` blocks in `socials/index.html`.
+- **Homepage copy** — the name, lede, and section links live in `index.html`.
+- **Colors / type / motion** — tokens are at the top of `assets/css/site.css`.
 
-### Advanced Usage
+## Optimizing photos
 
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+Photos are large straight off a camera, so optimized web copies live in
+`img/photos/`. Regenerate them after adding or changing originals:
 
-#### Gulp Tasks
+```bash
+npm install sharp          # one-time, dev only (not committed)
+node optimize-photos.mjs   # writes img/photos/ + img/photos/full/
+```
 
-- `gulp` the default task that builds everything
-- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp sass` compiles SCSS files into CSS
-- `gulp minify-css` minifies the compiled CSS file
-- `gulp minify-js` minifies the themes JS file
-- `gulp copy` copies dependencies from node_modules to the vendor directory
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-resume/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/resume/).
-
-## Custom Builds
-
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
+Originals are left untouched. `node_modules` is gitignored.
