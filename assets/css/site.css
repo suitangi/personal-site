@@ -111,14 +111,16 @@ ul { list-style: none; padding: 0; }
 }
 
 /* ---------- Layout helpers ---------- */
+/* Left-biased container: content shares one left edge across all pages,
+   rather than floating in the horizontal center of wide screens. */
 .wrap {
   width: 100%;
   max-width: var(--maxw);
   margin-inline: auto;
-  padding-inline: 24px;
+  padding-inline: clamp(24px, 6vw, 96px) 24px;
 }
 @media (max-width: 720px) {
-  .wrap { padding-inline: 28px; }
+  .wrap { padding-inline: 24px; }
 }
 .section { padding: 96px 0; }
 
@@ -282,7 +284,7 @@ ul { list-style: none; padding: 0; }
   width: 100%;
   height: auto;
   display: block;
-  overflow: visible;
+  overflow: hidden;               /* keep glyphs inside the box */
 }
 /* default: show the single-line name, hide the stacked mobile version */
 .hero-svg .name-1col { display: block; }
